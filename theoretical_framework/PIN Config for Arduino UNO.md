@@ -70,7 +70,7 @@ analog voltage into bits which the microprocessor can interpret. 10
 bit resolution means that the analog voltage can be represented by
 1024 binary digits.
 
-= Digital Pins =
+## Digital Pins
 
 Pins 0 through 13 of the Arduino UNO serve as digital I/O pins.
 
@@ -102,7 +102,7 @@ above 2V are considered 1. The voltages between 0.8V and 2V are
 undefined, therefore when connecting a component to an i/p digital
 pin, it is important to make sure that the logic is matched.
 
-== Pulse Width Modulation (PWM) ==
+### Pulse Width Modulation (PWM)
 
 Pulse width modulation or pulse-duration modulation, is a method of
 reducing the average power delivered by an electrical signal by
