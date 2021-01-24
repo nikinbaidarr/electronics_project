@@ -19,7 +19,7 @@ An arduino can be powered in 3 different ways:
 1. Using the power barrel jack, the DC barrel jack is connected to a
    battery, usually via. a snap connector.
 
-[Snap Battery Connection](https://www.google.com/search?q=snap+battery+arduino&tbm=isch&ved=2ahUKEwinv6-E9bTuAhW-5nMBHUoaB6AQ2-cCegQIABAA&oq=snap+battery+arduino&gs_lcp=CgNpbWcQAzoECAAQHjoGCAAQBRAeOgYIABAIEB5Q1ChYxy9glDJoAHAAeAGAAasCiAHkCZIBBTAuNy4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=KZYNYOeGI77Nz7sPyrScgAo&bih=670&biw=1366#imgrc=HDkjAG43PrtutM)
+    [Snap Battery Connection](https://www.google.com/search?q=snap+battery+arduino&tbm=isch&ved=2ahUKEwinv6-E9bTuAhW-5nMBHUoaB6AQ2-cCegQIABAA&oq=snap+battery+arduino&gs_lcp=CgNpbWcQAzoECAAQHjoGCAAQBRAeOgYIABAIEB5Q1ChYxy9glDJoAHAAeAGAAasCiAHkCZIBBTAuNy4xmAEAoAEBqgELZ3dzLXdpei1pbWfAAQE&sclient=img&ei=KZYNYOeGI77Nz7sPyrScgAo&bih=670&biw=1366#imgrc=HDkjAG43PrtutM)
 
 2. Using the USB port, which can be connected to a PC via a USB cable.
 
