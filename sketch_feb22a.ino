@@ -1,9 +1,11 @@
 
-int trigger = 10;
-int echo[2] = {9,7};
+int trigger[2] = {10,8};
+int echo[2] = {11,9};
 
 unsigned long startTime;
 unsigned long stopTime;
+
+int visitorCount;
 
 float speedOfSound = 0.034;
 
@@ -16,53 +18,55 @@ float duration[2];
 float distance[2];
 
 void setup() {
-  
+
   Serial.begin(9600);
-  
-  pinMode(trigger,OUTPUT);
-  
-  for(int i = 0; i < 2; i++) {  
+
+  for(int i = 0; i < 2; i++) {
+    pinMode(trigger[i],OUTPUT);
     pinMode(echo[i],INPUT);
   }
-    
 
-  Serial.print("starting init \n");
+  visitorCount = 0;
 
   for (int i = 0; i < 2; i++) {
-    digitalWrite(trigger,LOW);
+    digitalWrite(trigger[i],LOW);
     delayMicroseconds(2);
-    digitalWrite(trigger,HIGH);
+    digitalWrite(trigger[i],HIGH);
     delayMicroseconds(10);
-    digitalWrite(trigger,LOW);
+    digitalWrite(trigger[i],LOW);
     delayMicroseconds(2);
-  
-    initialDuration[i] = pulseIn(echo[i],HIGH);
-  }
-      
-  for (int i = 0; i < 2; i++)
-    initialDistance[i] = initialDuration[i]/2 * speedOfSound;
-    
 
-  Serial.print("System has been initialized\n\n");  
+    initialDuration[i] = pulseIn(echo[i],HIGH);
+    delay(1000);
+  }
+
+  for (int i = 0; i < 2; i++) {
+    initialDistance[i] = initialDuration[i]/2 * speedOfSound;
+//    delay(1000);
+    }
+
+
+  Serial.print("System has been initialized\n\n");
   for (int i = 0; i < 2; i++){
     if (i == 0)
       Serial.print("initial distnace[0] = ");
-    else 
-      Serial.print("initial distnace[1] = ");  
-   Serial.print(initialDistance[i]); Serial.print(" cm\n");  
-  }  
+    else
+      Serial.print("initial distnace[1] = ");
+   Serial.print(initialDistance[i]); Serial.print(" cm\n");
+  }
+   delay(5*1000);
 
 }
 
 void loop() {
-  
+
   for (int i = 0; i < 2; i++){
-    
-    digitalWrite(trigger,LOW);
+
+    digitalWrite(trigger[i],LOW);
     delayMicroseconds(2);
-    digitalWrite(trigger,HIGH);
+    digitalWrite(trigger[i],HIGH);
     delayMicroseconds(10);
-    digitalWrite(trigger,LOW);
+    digitalWrite(trigger[i],LOW);
     delayMicroseconds(2);
 
     startTime = micros();
@@ -70,29 +74,42 @@ void loop() {
     stopTime = micros();
     elapsedMicroseconds[i] = stopTime - startTime;
   }
-    
-  for (int i = 0; i < 2; i++)
-     distance[i] = duration[i]/2 * speedOfSound;
 
-  if (distance[0] < (0.97*initialDistance[0]) || distance[1] < (0.97*initialDistance[1])) {
+  for (int i = 0; i < 2; i++) {
+     distance[i] = duration[i]/2 * speedOfSound;
+  }
+    
+
+  if (distance[0] < (0.97*initialDistance[0]) && distance[1] < (0.97*initialDistance[1])) {
     Serial.print("obstacle detected\n");
+
+        for (int i = 0; i < 2; i++){
+        if (i == 0)
+          Serial.print("elapsedMicroseconds[0] = ");
+        else
+          Serial.print("elapsedMicroseoncds[1] = ");
+        Serial.print(elapsedMicroseconds[i]); Serial.print("\n\n\n");
+        }
+
         if (elapsedMicroseconds[0] < elapsedMicroseconds[1])
-          Serial.print("in\n");
+          visitorCount++;
         else if (elapsedMicroseconds[0] > elapsedMicroseconds[1])
-          Serial.print("out\n");  
+          visitorCount--;
   }
   else {
-    Serial.print(" no obstacle \n");  
+    Serial.print(" no obstacle \n");
       for (int i = 0; i < 2; i++){
         if (i == 0)
           Serial.print("distnace[0] = ");
-        else 
-          Serial.print("distnace[1] = ");  
-        Serial.print(distance[i]); Serial.print(" cm\n");  
-        
+        else
+          Serial.print("distnace[1] = ");
+        Serial.print(distance[i]); Serial.print(" cm\n");
+
       }
-        
+
   }
-   
-  delay(2500);
+
+  Serial.print("No of people inside = "); Serial.print(visitorCount); Serial.print("\n\n");
+  delay(1500);
+
 }
