@@ -1,0 +1,287 @@
+
+\documentclass{article}
+
+\usepackage[a4 paper, top=1in, left=1in,right= 1in, bottom=0.5in,
+footskip=1in]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{tocloft}
+\usepackage{listings}
+\usepackage{filecontents}
+\usepackage{verbatim}
+\usepackage{eurosym}
+\usepackage[export]{adjustbox}
+\usepackage[hidelinks,linktoc=all]{hyperref}
+\usepackage{xcolor}
+\usepackage{float}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.1mm}}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+  \textsc{\huge Purbanchal University}\\[1cm]
+  {\huge College of Biomedical Engineering and Applied Sciences}\\[1cm]
+  % \textsc{\large \bfseries Tissue Device Interactions}\\[0.8cm]
+  % {\large [BEG 3B2 BM]}\\[0.5cm]
+  \includegraphics[width=0.4\textwidth]{../cbeas-logo.png}\\[1cm]
+
+  \color{red} \HRule \\[0.4cm] \color{black}
+  {\huge \bfseries Application of Machine Learning Algorithms for the
+  detection of brain tumours in images acquired through Magnetic
+  Resonance Imaging}\\[0.2cm]
+  \color{red} \HRule \\[2cm] \color{black}
+
+% Author and supervisor
+\textbf{
+\Large Proposed By:\\
+\Large Lucky Chaudhary [A27]\\ Namrata Tamang [B3]\\ Nikin Baidar
+  [B4]\\ Nilima Sangachchhe [B5]\\ Shashwot Khadka [B18]\\ Sneha
+  Khadka [B22]\\Suhana Chand [B23]\\[1cm]}
+% \Large Supervisor: \\[0.2cm]
+% \Large Prof. Alaka Acharya??}
+\vfill
+{\Large June 2021.}
+
+\end{center}
+\end{titlepage}
+
+
+  \iffalse
+    Big picture problem or topic widely debated in your field
+    Gap in the literature on this topic
+    Your project filling the gap
+    the specific material you examine in the paper.
+    your original argument
+    a strong concluding sentence.
+
+
+    Current diagnostic imaging categories in psychiatry are
+    questionable regarding their reliability and validity.
+
+
+    % point
+
+    market ma mental disorder ko lagi widely accepted kunai pani
+    imaging wa molecular basis chaina
+
+    research haru bhako cha tara reverse fallacy le garda they are
+    rather believed to be useless and inaccurate.
+
+    tara advancements haru bhairacha and hamro reasearch le tyo
+    advancement ma contribute garcha
+
+  \fi
+
+\begin{abstract}
+
+  The absence of biological markers makes it exceptionally difficult
+  for neurologists to diagnose a person with a mental disorder.
+  Currently, diagnosis of mental disorders is based on behavioral
+  observations and patient-reported symptoms and the Diagnostic and
+  Statistical Manual of Mental Disorders (DSM) classification.
+
+  Although there have been studies that implement imaging techniques
+  for deciphering the etiology and the physical cause of several
+  mental disorders, the findings from brain imaging do not appear
+  amongst the diagnostic criteria. This essentially means that
+  neuroimaging is not widely accepted in the process of psychiatric
+  diagnosis. The primary reason for this is reverse fallacy.
+
+  Nonetheless, a defiant minority now have started to implement
+  neuroimaging techniques such as fMRI, SPECT, PET for the diagnosis
+  psychiatric disorders, however, there are no solid molecular or
+  imaging basis that are widely accepted for the assessment of mental
+  disorders.
+
+  % fMRI ko barema halka
+
+  Here in the proposed research we will be \textit{assessing} MR
+  images of 35 subjects who, are suffering or have suffered, from one
+  major depressive disorder and \textit{making an attempt} at arriving
+  to a comprehensive conclusion about how the ``limbic brain network''
+  of patients suffering from Major Depressive Disorder compare to that
+  of healthy individuals who share similar socio-demographic
+  parameters as the subjects.
+
+\end{abstract}
+
+\section{Introduction}
+
+Major Depressive Disorder is one of the most commonly diagnosed mental
+disorder in the entire world.
+
+MDD has similarities with schizophrenia and bipolar disorder.
+
+diagnosis based on symptoms and behavioral observations.
+
+\section{Problem Statement}
+
+\subsection{Need For An Imaging Basis}
+
+The diagnosis procedures that are the gold standard for diagnosis of
+psychiatric disorders are wholly based on behavioral observations and
+patient reported symptoms. There are two most widely established
+symptoms that are used to classify these manifestations, one is the
+Diagnostic and Statistical Manual of Mental Disorders (DSM) and the
+other is International Classification for Diseases (ICD).
+
+Despite each being as widely used as the other, both of these
+diagnosis manuals are more like frameworks provide a way of
+classifying a psychiatric disorder depending on patterns of behaviour
+rather than interpreting the etiology and the physical cause of those
+disorders.
+
+This statement alone raises an argument that ``although reliable,
+current diagnostic procedures in psychiatry are not entirely valid''.
+
+\iffalse
+Reliable in the sense that any trained professional will arrive at
+the same diagnosis for each patient.
+
+Valid in the sense that it reflects the underlying psychological
+and biological commonalities and differences among different
+disorders to a certain extent. Validity continues to be more
+difficult to achieve.
+\fi
+
+Let us take an example of the diagnostic procedure involved in the
+diagnosis of Major Depressive Disorder. The DSM-V, published in 2013,
+is the most up-to-date manual and is based upon the work of expert
+study groups and makes use of large sets of data. According to the
+DSM-V, for a person to be classified as "suffering from Major
+Depressive Disorder", \textit{he/she must report with either depressed
+mood or anhedonia (inability to feel pleasure in normally pleasurable
+activities) along with four out of eight additional symptoms}.
+
+This makes it totally possible for 2 distinct individuals who do not
+share a single symptom in common and yet receive treatment (or
+medication) for MDD.
+
+Furthermore, the current diagnostic procedures such as the DSM-V are
+not entirely bulletproof. For example, impulsivity, emotional lability
+(the property of changing rapidly), and difficulty with concentration
+each occurs in more than one disorder.
+
+Now, the fact that,
+
+\begin{enumerate}
+  \item Different exemplars of the same category can share no
+    symptoms and
+  \item The exemplars of two different categories may share common
+    symptoms
+\end{enumerate}
+
+raises questions about the validity of the current diagnostic
+procedures in psychiatry. Therefore, an imaging basis is necessary for
+the diagnosis of mental disorders.
+
+WHY IMAGING WON'T WORK?
+
+There exists thousands of published research studies using
+functional neuroimaging methods such as SPECT, PET, and fMRI.
+
+Findings from brain imaging do not appear amongst the diagnostic
+criteria. aside from its use to rule out potential physical causes
+of a patient's condition, for example a brain tumor, neuroimaging
+is not used in the process of psychiatric diagnosis.
+
+Why has diagnostic neuroimaging not yet found a place in
+psychiatric practice? Sensitivity, specificity and standardization
+in psychiatric brain imaging.
+
+    - Diagnosis must be made for individuals and not groups
+    - meta-analyses of neuroimaging studies has yet to reveal
+      patterns of neural activity that are unique to specific
+      mental disorder
+
+Sensitivity
+
+Imaging studies are generally not highly sensitive to the
+difference between illness and health
+
+Specificity:
+
+Most psychiatric imaging studies involve subjects from only two
+categories- patients from a single diagnostic category and people
+without any psychiatric diagnosis (healthy individuals), the most
+that can be learned from such a study is how brain activation in
+those with a particular disorder differs from brain activation in
+those without a disorder.
+
+This raises a dilemma for the diagnosing clinician, as the
+question is not "does this person have disorder X or is she
+healthy? " but "does this patient have disorder X,Y,Z or is she
+healthy?" because the pattern of images that distinguishes
+patients with disorder X from healthy people may not be unique to
+X but shared with a whole alphabet of other disorders.
+
+For example, Amygdala ko example
+
+- (more sophisticated) methods of image analysis may hold promise
+  discerning the underlying differences among the many disorders
+  that feature similar regional abnormalities !??
+
+
+- ``statistical approach'' to image analysis makes it possible to
+  discover, \underline{spatial and temporal} patterns that
+  correspond to performance of specific tasks and specific
+  diagnoses. Such statistical methods have only been begun to be
+  applied to clinical disorders but show promise for increasing
+  the ``specificity'' of brain imaging markers for mental illness.
+
+
+near-term and long-term prospects of neuroimaging? and what
+obstacles block the use of such methods? Answer to the 2nd: The
+nature of imaging studies and of psychiatric diagnosis.
+
+Standardization
+
+Standardization is relevant in the sense that protocols for
+imaging studies differ from study to study, particularly amongst
+functional imaging studies.
+
+The results of psychiatric imaging research are often summarized
+by stating that certain regions are under or over active or more
+or less functionally connected.
+
+Findings on the patterns of activation acquired in studies of
+psychiatric patients depends strongly on the task being performed
+by the subjects and the statistical comparisons made by the
+researcher afterwards. Such findings are pretty much incomplete
+unless they include the information about what task evoked the
+activation in question: whether the patient wa resting, processing
+an emotional stimuli, resisting emotional stimuli or engaged in
+some other task?
+
+Therefore the fact that imaging study's conclusions are relative
+to the tasks performed adds further complexity to the problem of
+consistently discriminating patterns of activation of healthy and
+ill subjects.
+
+\section{Review of Literature}
+
+% opening note:
+
+Implementation of fMR-imaging techniques to research the core aspects
+of structural and functional brain alterations in patients suffering
+from MDD.
+
+Past work seems like structural MRI and fMRI look promising for
+providing excellent and reliable indexes for the aid in the diagnosis
+and ultimately treatment of MDD
+
+
+% ending note:
+
+trar ahile samma figure out bhako kura haru lai chai actual practice
+ma lyauna sakeko chaina
+
+\end{document}
