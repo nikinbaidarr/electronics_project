@@ -527,7 +527,23 @@ time-series correlations in BOLD fMRI data acquired in a task-free
 state will be used.
 
 \subsection{Pre-processing}
+
+Functional fMRI data will be preprocessed using the AFNI software.
+Seed based resting-state functional connectivity(rsFC) analysis of
+hippocampal network will be performed. rsFC for each seed region will
+be calculated as the correlation between its mean time course and the
+time course of every voxel in the brain. Then we will submit the rsFC
+results for each seed region to a 2 × 3 (hemisphere × group)
+mixed-design analysis of variance with age and head motion included as
+covariates. And rsFC results between MDD patients and healthy
+participants will be compared.
+
 \subsection{Statistical Analysis}
+
+T test and chi test will be performed to evaluate group differences in
+demographics.
+
+\newpage
 
 \section{Cost Estimations}
 \section{Time Frame \& Proposed Work Flow}
