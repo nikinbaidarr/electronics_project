@@ -63,6 +63,12 @@ footskip=0.5in]{geometry}
 \clearpage
 \setcounter{page}{1}
 
+% preface
+\begin{center}
+ \textbf{\large Preface}
+\end{center}
+\newpage
+
 % abstract
 \begin{center}
   \textbf{\large Abstract}
@@ -109,6 +115,13 @@ footskip=0.5in]{geometry}
   of healthy individuals who share similar socio-demographic
   parameters as the subjects.
 
+\newpage
+
+% table of contents
+\thispagestyle{empty}
+\tableofcontents
+\addcontentsline{}{}{}
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
 \newpage
 
 \pagenumbering{arabic}
@@ -231,41 +244,43 @@ data sharing.
 
 \subsection{Neuroimaging}
 
-Neuroimaging or brain imaging is the use of various techniques to
-either directly or indirectly image the structure, function, or
-pharmacology of the nervous system. Current neuroimaging techniques
-reveal both form and function. They reveal the brain's anatomy,
-including the integrity of brain structures and their
-interconnections. Neuroimaging falls into two broad categories:
+Neuroimaging or brain imaging is the use of various imaging modalities
+to either directly or indirectly image the structure, the function, or
+the pharmacology of the nervous system. Current neuroimaging
+techniques reveal both form and function. They reveal the brain's
+anatomy, including the integrity of brain structures and their
+interconnections. Neuroimaging can be divided into two broad
+categories:
 
 \begin{enumerate}
 
-  \item Structural imaging, which deals with the structure of the
-    nervous system and the diagnosis of gross (large scale)
-    intracranial disease (such as a tumor) and injury.
+  \item \textbf{Structural Imaging}, which deals with the structure of
+    the nervous system and the diagnosis of gross (large scale)
+    intracranial disease (such as a tumor) and head injury.
 
-  \item Functional imaging, which is used to diagnose metabolic
-    diseases and lesions on a finer scale (such as Alzheimer's
-    disease) and also for neurological and cognitive psychology
-    research and building brain-computer interfaces.
+  \item \textbf{Functional imaging}, which is used to diagnose
+    metabolic diseases and lesions on a finer scale (such as
+    Alzheimer's disease) and also for neurological and cognitive
+    psychology research and building brain-computer interfaces.
 
 \end{enumerate}
 
 \enlargethispage{\baselineskip}
-Functional   Magnetic   resonance   imaging   (fMRI), a modern
-technique of imaging, is a powerful non-invasive and safe tool which
-is used for the study of the function of the brain based on measure of
-the brain neural activation (Farah, 2002). The fMRI can localize the
-lo-cation  of  activity in the  brain  which  is  caused  due  to
-sensory  stimulation  or  cognitive  function (Gabral,  Sil-veira, \&
-Figueredo, 2011). In clinical field, fMRI allows the researchers to
-study how are the healthy brain func-tions, how different diseases
-affect the brain functions, how  healthy  brain  function  is
-recovered  after  damage  and  how  drugs  can  control  the  diseases
-effect  on  the  brain activity (Daliri \& Behroozi, 2012).  near-term
-and long-term prospects of neuroimaging? and what obstacles block the
-use of such methods? Answer to the 2nd: The nature of imaging studies
-and of psychiatric diagnosis.
+
+Functional Magnetic resonance imaging (fMRI) is a modern technique of
+imaging, which is a powerful non-invasive and safe tool which is used
+for the study of the function of the brain based on the measure of the
+brain neural activation. The fMRI can localize the location of
+activity in the  brain  which  is  caused  due  to sensory stimulation
+or  cognitive  function. In clinical field, fMRI allows the
+researchers to study how does a healthy brain function, how different
+diseases affect the brain functions, how healthy brain function is
+recovered after damage and how drugs can control the diseases effect
+on the brain activity.
+
+% near-term and long-term prospects of neuroimaging? and what obstacles
+% block the use of such methods? Answer to the 2nd: The nature of
+% imaging studies and of psychiatric diagnosis.
 
 \newpage
 
@@ -441,52 +456,468 @@ the tasks performed adds further complexity to the problem of
 consistently discriminating patterns of activation of healthy and ill
 subjects.
 
-
-A statistical approach to image analysis makes it possible to
-discover, \underline{spatial and temporal} patterns that correspond to
-performance of specific tasks and specific diagnoses. Such statistical
-methods have only been begun to be applied to clinical disorders but
-show promise for increasing the ``specificity'' of brain imaging
-markers for mental illness.
-
 Now, in the word of technology that is advancing day in day out,
-the scope seems promising.
-
-- development (more sophisticated) methods of image analysis may hold
-  promise discerning the underlying differences among the many
-  disorders that feature similar regional abnormalities
-
-\include{random dir/literature-review}
+development (more sophisticated) methods of image analysis may hold
+promise discerning the underlying differences among the many disorders
+that feature similar regional abnormalities. Nevertheless, the scope
+of neuroimaging seems promising for the aid in diagnosis, and
+hopefully treatment of psychiatric disorders.
 \newpage
 
-\section{Feasibility Study}
+\section{Review of Literature}
+
+\subsection{Background}
+% opening note:
+% background and aim of the review
+
+Efforts are continuously being made in order to discover reliable
+biomarkers for the clarification of biological mechanisms that are
+involved in psychiatric disorders, identification of subjects at risk
+and provide etiology-based treatments. Imaging modalities such as
+structural magnetic resonance imaging (sMRI) and functional magnetic
+resonance imaging (fMRI) are used to outline brain irregularities over
+Major depressive disorder (MDD).
+
+Multiple modalities have been considered for assessment of functional
+connectivity of brain networks, but fMRI is the most commonly used
+amongst the others. This is because (insert reason a valid here).
+
+% For this reason,
+Most studies that have been referred to, whilst writing this review
+have utilized fMR-imaging modality to conduct investigations on the
+core aspects of functional brain alterations in patients suffering
+from MDD.
+
+The goal of this literature review is to gain a comprehensible
+knowledge about the associations of various different brain networks
+with Major Depressive Disorder and also to acquire a brief overview of
+how the brain networks, especially the hippocampal network gets
+affected by MDD.
+
+% insert more info on what the project is concerned with
+Since this project is mostly concerned with the hippocampal network,
+most of the literature will be more or less be related to the temporal
+lobe and its structures.
+
+%               __              __                  _
+%   ____ ______/ /___  ______ _/ /  ________ _   __(_)__ _      __
+%  / __ `/ ___/ __/ / / / __ `/ /  / ___/ _ \ | / / / _ \ | /| / /
+% / /_/ / /__/ /_/ /_/ / /_/ / /  / /  /  __/ |/ / /  __/ |/ |/ /
+% \__,_/\___/\__/\__,_/\__,_/_/  /_/   \___/|___/_/\___/|__/|__/
+
+% Lucky
+
+% Neuroimaging correlates of depression ???
+\subsection{Functional Magnetic Resonance Imaging for the Assessment
+of MDD}
+
+People with MDD show distinct functional alterations that differ from
+those of healthy individuals. Functional brain alterations can be
+found by detecting the activation of specific brain regions. A brain
+region become active when there is blood flow in that region, and an
+elevated level of metabolism. Now, Unlike structural brain imaging
+that captures the anatomical structures present in the brain,
+functional brain imaging involves measurement of blood flow and
+metabolism to visualize the activation of specific brain regions.
+Therefore, functional imaging techniques such as the fMRI indicates
+the activation of various different brain regions which makes it quite
+convenient to identify what parts of brain are active during a
+condition.
+
+fMRI comes in two flavours, one is the resting-state fMRI and the
+other is the task-based fMRI. ``Resting-state'' is when a person is
+fully awake but isn't performing any particular task that requires
+attention and cognition. While many studies are based on the rs-fMRI,
+researches believe that the rs-fMRI lacks the linearity and stationary
+signals required for the assessment of MDD.
+
+% The default mode network, which comprises the ventromedial prefrontal
+% cortex, posterior cingulate cortex, and precuneus, is primarily active
+% when no task is being performed and the brain is passively resting.
+% However, for tasks that require attention and cognition the DMN
+% becomes pretty much inactive.
+
+There have been limited reports of functional alterations in the
+temporal lobe with the use of pure rs-fMRI. Nonetheless, in one study,
+treatment resistant patients with MDD showed increased levels of
+hippocampal activation during loss events.
+
+Yu et al., in their reasearch showed functional alterations in the
+activity of the right hippocampus, right para-hippocampal gyrus, left
+amygdala and the entire caudate nucleus, which ultimately suggests
+that the temporal lobe and various structures in the temporal lobe,
+such as the hippocampus might have an important pathophysiology of
+MDD.  Therefore, additional studies are needed to determine the
+relevance of these findings.
+
+In another study, the duration of MDD was directly associated with
+hippocampal volume loss in women with MDD.
+
+It was also found in some task-based fMRI studies that the
+presentation of sad faces led to increased activation of left
+hippocampus, amygdala and para-hippocampal gyrus.
+
+Stoyanov and colleagues found out that there is a weak correlation
+between medial frontal cortex (MFC) and MDD subjects. In addition,
+they also made an implication that the pathophysiology of MDD was
+because of the activation in anterior thalamus, hippocampus and
+para-hippocampal gyrus areas.
+
+\iffalse
+
+% what are all the structures mentioned here a part of ? brain
+% networks and how do
+% they relate to hippocampus/ our study? :
+
+Patients with MDD were prone to have an increased activity in the
+medial prefrontal cortex (MPFC)/anterior cingulate cortex (ACC) areas
+with diminished activity in posterior cingulate cortex(PCC)/precuneus
+and bilateral angular gyrus areas.
+
+% Some of the articles showed: what articles did ?
+
+1. Increased connectivity in depression in the bilateral dorsomedial
+   prefrontal cortex
+
+2. Increased functional network connectivity in the
+   thalamus, subgenual cingulate, the precuneus and orbitofrontal
+   cortex (OFC)
+
+3. Decreased influence from the anterior insula to the
+   middle frontal gyrus was found in medicated subjects with MDD
+
+4. The relation that the right anterior insula has on depression
+   pathophysiology was confirmed through the positive correlation
+   between hippocampal node activation and severity of depression
+
+\fi
+
+% Nilima
+
+\subsection{Resting State Functional Connectivity of Hippocampal Networks}
+
+Various studies have focused on the abnormal functional connectivity
+of several brain networks in the patients with MDD.
+
+Studies have shown that MDD not only shows associations with regional
+deficits, but also with abnormal functional integration of distributed
+brain regions. A number of brain regions with abnormal activities in
+the resting-state have been identified to be associated with MDD, such
+as para-hippocampal gyrus, prefrontal cortex, cingulate gyrus,
+fusiform gyrus, and thalamus. Moreover, disruptions in functional
+connectivity has been observed between specific pairs of regions in
+MDD through functional connectivity analyses which may or may not
+include seed-based correlation analysis.
+
+Greicius et al. (2007) used the independent component approach (ICA),
+selecting a set of regions with shared fMRI signal fluctuations and a
+high degree of spatial similarity to the DMN, and reported increased
+connectivity with the thalamus and the subgenual ACC in depression.
+
+Many studies have found that the hippocampus, which is complex
+structure embedded deep into the temporal lobe, plays an important
+role in MDD. Hippocampus can be subdivided into 3 sub-structures, and
+theses structures are enumerated below:
+
+\begin{enumerate}[nosep]
+    \item Cornu Ammonis (CA)
+    \item Dentate Gyrus (DG)
+    \item Subiculum
+\end{enumerate}
+
+Various studies have been performed with each of these sub-structures
+as the seed or the region of interest. The findings from some of the
+studies that are relevant to this project are listed below:
 
 \begin{itemize}
 
-  \item This project will focus in analysis of the functional and
-    structural connectivity of the hippocampal network of patients
+    \item Increased connectivity in the left premotor cortex (PMC) and
+        reduced connectivity in the right insula with the CA seed
+        region.
+
+    \item Increased connectivity was reported in the left
+        orbitofrontal cortex (OFC) and left ventrolateral prefrontal
+        cortex (vPFC) with the DG seed region.
+
+    \item The subiculum seed region revealed increased connectivity
+        with the left premotor cortex (PMC), the right middle frontal
+        gyrus (MFG), the left ventrolateral prefrontal cortex (vPFC)
+        and reduced connectivity with the right insula.
+
+\end{itemize}
+
+Furthermore, a region-of-interest based correlation analyses performed
+in rs-fMRI showed FC with the hippocampus in limbic system, sub
+cortical areas, temporal lobe, medial and inferior prefrontal cortex,
+while at the same time, negative FC was in bilateral prefrontal
+cortex, parietal and occipital cortex and the cerebellum.
+
+\enlargethispage{\baselineskip}
+In addition to that, many researches have implicated abnormalities in
+the prefrontal-hippocampus neural circuitry in patients suffering from
+MDD. fMRI studies have also found abnormal hippocampal activation as
+well as abnormal functional connectivity of prefrontal-hippocampus
+circuitry in adults who were suffering from MDD. Moreover, Peng et.
+al. in one of their recent studies reported decreased rsFC between
+hippocampus and insula in medication-resistant adult patients.
+
+The hippocampus has been proven to play an important role in memory
+and emotion processing. Functional abnormalities of the hippocampus in
+adult MDD have been consistently reported in several fMRI studies.
+According to an fMRI study, decreased brain activity in the
+hippocampus was reported in depressive patients.
+
+Similarly, the hippocampus and amygdala of MDD patient’s showed an
+overlapping pattern of reduced FC to the dorsomedial-prefrontal cortex
+and fronto-insular operculum. Both of these regions are known to
+regulate the interactions among intrinsic networks (i.e., default
+mode, central executive, and salience networks) that are disrupted in
+MDD.
+
+A few postmortem studies have found decreased cellular density in the
+hippocampus, including one study that showed patients with MDD have
+fewer anterior dentate gyrus granule cells than control subjects.
+However, functional imaging studies at this resolution in patients
+with MDD are lacking.
+
+For several reasons, researchers have focused on the role of the
+hippocampus in depression. The  hippocampus is involved in the
+regulation of the hypothalamic pituitary adrenal (HPA)-axis, which is
+responsible for production of stress-related glucocorticoids such as
+cortisol. In this context, depressed individuals have been found
+consistently to report high levels of stress, which is reflected
+biologically in elevated rates of hypercortisolemia and disturbed
+HPA-axis functioning. Moreover, depressed patients have also been
+found to be characterized by difficulties in hippocampal-dependent
+learning  and  memory.Also, Problems  can occur  when excessive
+amounts  of  cortisol  are  sent to  the  brain due  to  a stressful
+event  or  a chemical imbalance in the body.
+
+\subsubsection{Overview of Hippocampal Circuitry and its Functions}
+
+Hippocampus is a relatively simple one that can be related to the
+functional requirement of episodic memory and more specifically to the
+storage and retrieval of memory.
+
+The hippocampus is part of the hippocampal formation which includes
+the dentate gyrus, Para hippocampal gyrus, and hippocampal gyrus.
+
+The hippocampal gyrus contains areas such as the entorhinal cortex and
+subiculum, which are both vital in the flow of information through the
+hippocampus.
+
+The hippocampus is divided into CA1 to CA4 regions which stands for
+cornu ammonis. The CA1 has an important role in memory due to the high
+levels of NMDA glutamatergic receptors located in the CA1 Schaffer
+collateral neurons.
+
+The synaptic plasticity of these neurons heavily relies on long-term
+potentiation (LTP) induction to allow the strengthening of declarative
+memory which includes two types of implicit memory such as episodic
+and semantic memory such as facts and events.
+
+\newpage
+% Namrata
+
+\subsection{Important FCs for Diagnosis of MDD}
+
+Default mode network (DMN), Anterior salience network (ASN) and
+Executive control network (ECN) are the brain networks linked with
+clinical depression. Increased functional connectivity within the DMN
+is primarily associated with depression. At the same time, it is found
+that the DMN-ECN and the DMN-ASN pairs have less interactions or
+connectivity during episodes of depression. Within the ECN, the
+functional connectivity may be excessive or deficient. Furthermore,
+the ECN in depressed women is correlated with negative self-directed
+thoughts and the ECN-DMN functional connectivity is related to
+rumination.  Researches have shown that ASN which includes main
+emotional areas maybe over, under or normally connected in depression.
+Depression is also related with the impaired functional connectivity
+of other brain networks besides the ones mentioned above.
+
+In addition to that the Posterior Cingulate Cortex which is a part of
+the DMN has shown significant relationship with the hippocampal
+network, albeit this is not just specific to MDD.
+
+% However, all of these findings seem inconsistent as the results vary
+% from one research to another. Evidence for increased or decreased
+% functional connectivity of the three major networks mentioned is
+% needed.
+
+Hindawi Neural Plasticity et. al., on comparing the functional
+activity within DMN, found that there was decreased functional
+connectivity within DMN network in depressed people, which
+contradicted with the most researches that have been conducted. This
+may be because the patients involved in their study had mild to
+moderate depression, which showed cognitive similar features as in
+depression (MDD) like rumination and control deficits, but lacked
+neural markers present in typical serious condition like MDD.
+
+Significant rs-fMRI differences between groups were identified in
+multiple clusters in the DMN and ECN. Greater positive connectivity
+within the ECN and between ECN and DMN regions was associated with
+poorer episodic memory performance in the group of healthy individuals
+but better performance in the MDD group. Greater connectivity within
+the DMN was associated with better episodic and working memory
+performance in the Non-Depressed group but worse performance in the
+MDD group.
+
+These results provide evidence that cognitive performance in MDD may
+be associated with aberrant functional connectivity in cognitive brain
+networks and suggest patterns of alternate brain function that may
+support cognitive processes in MDD.
+
+Results also showed that the DMN–left fronto-parietal network is the
+pair discriminating between healthy and depressed people to the
+highest degree. According to Davidson and Heller models, left
+prefrontal activity is related to positive emotions and motivations,
+while right corresponds to negative emotions and withdrawal of
+motivation.
+
+Relatively active right prefrontal area and idling left
+prefrontal cortex together may be a neurophysiological signature of
+depression. Therefore, coupling of left prefrontal with DMN denotes
+its passivity and that there's is less approach motivation, less happy
+mood which is one of the most important depression related signs.
+
+% concluding note:
+
+Decreased functional connectivity between left fronto-parietal network
+and subsystems of the DMN can be seen in fMR images of depressed
+patient.
+
+Many studies that have been published showed increased functional
+connectivity within DMN in depression, which was found to be
+contradiction with one particular research paper which may be due to
+sample differences like severity of the disorder, age group,and other
+demographics.
+
+\newpage
+\subsection{Structural Changes associated with MDD}
+
+The latest research shows that the size of specific [brain](brain)
+regions can decrease in people who experience depression. Researchers
+continue to debate which regions of the brain can shrink due to
+depression and by how much.
+
+Hippocampus, thalamus, amygdala and the frontal prefrontal cortices
+are the regions that have the most shrinkage. The amount by which,
+these areas shrink is linked to the severity and the length of the
+depressive episodes. In the hippocampus, for example, noticeable
+changes can occur anywhere from 8 months to a year.
+
+It was found in a study that people experiencing their first
+depressive episode had a normal hippocampus size but as the number of
+episodes of depression a person had would increase, the greater the
+reduction in hippocampus size. It has been widely reported that there
+is a significant reduction in hippocampal volume in depression
+patients.  This situation was found in both adult and adolescent
+depressed patients, whether they were in their first or recurrent
+depressive episodes. A recent study reported that, in female patients
+with recurrent familial pure depressive disorder (rFPDD), volumetric
+reductions of the right hippocampal body and tail were significantly
+larger than those of the left, while the whole brain volume was
+approximately equal to that of healthy subjects.
+
+There is evidence that stress via the hypothalamic-pituitary-adrenal
+axis can result in elevated glucocorticoid levels in patients with
+depression and can act on the glucocorticoid receptors in the
+hippocampus. Thus, hippocampal atrophy occurs as a result.
+
+Reduced gray matter volume and reduced functional activity in the
+hippocampus would lead to negative emotion and the inability of
+cognitive processing in depressive patients.  Depression can also
+decrease neuronal dendrite branching and plasticity in the
+hippocampus.
+
+In addition, depression can trigger activation of the
+hypothalamic-pituitary-adrenal axis, increase level of
+corticosteroids, and down regulate hippocampal neurogenesis.
+Depression makes changes in hippocampal volumetric changes,
+hippocampal neurogenesis, and apoptosis of hippocampal neurons.
+
+\subsection{Reverse Inference Fallacy in MDD}
+
+The diagnosis of MDD relies heavily on patients for symptom recall.
+Like in many other mental disorders there is no specific physical
+symptom in MDD, therefore neurologists are unable to deduce MDD based
+on conventional MRI.
+
+Moreover, different mental disorders can produce similar structural or
+functional brain alterations which puts the neurologist in a much
+greater dilemma as they are unable to determine whether a specific
+alteration in the brain is attributed to MDD-alone.  So, the reverse
+inference is invalid as structural or functional activity patterns
+from MRI cannot be used to diagnose a patient with a specific
+neurological disorder.
+
+Researchers, over the past few decades have been attempting to develop
+a “bridge”, such as novel biomaterial, high resolution and
+multi-modality imaging technique, artificial intelligence, novel
+nanomaterials and quantitative electrical signal acquisition
+technologies to overcome reverse inference fallacy that hinders the
+study of MDD.
+
+\subsection*{Conclusion of the Literature Review}
+
+Evidence shows that major depressive disorder (MDD) patients at
+resting-state brain connectivities are aberrant compared with healthy
+controls (HC). Abnormal resting-state functional connectivities of
+distributed brain networks are believed to contribute to the MDD
+illness process.
+
+And after a thorough review of literature, it seems as if structural
+MRI and fMRI look promising for providing excellent and reliable
+indexes for the aid in the diagnosis and ultimately treatment of MDD.
+
+Once it over-comes the afore mentioned hurdles, MRI may become a
+clinical decision support tool aimed to reduce unsuccessful treatments
+and improve treatment efficacy and efficiency.
+
+Reliable, reproducible and valid conclusions must be derived from
+these types of studies for imaging modalities like fMRI to not only
+aid in the diagnosis but also to optimize patient care, reduce
+treatment resistance and shorten the duration of illness.
+
+\section{Feasibility Study}
+
+The following points addresses the feasibility of the proposed study:
+
+\begin{itemize}
+
+  \item This project will primarily focus on analysis of the
+    functional connectivity of the hippocampal network of patients
     suffering from Major Depressive Disorder.
 
   \item Although the approach of neurological study is new in Nepal,
-    various research has been conducted worldwide, so we can use the
-    public data/information present in internet for our project.
+    thousands of research has been conducted worldwide that involves
+    similar approaches for the exploration of functional connectivity.
 
-  \item There isn't many components required for the project and can
-    be carried out in given time frame with low budget.
 
-  \item The research and study can be done pretty much virtually at
-    home, which is much more favorable during pandemic moment.
+  \item Data will be acquired form a public database, which is
+    available online for the sake of this project.
+
+  \item There are not many materials or components required for the
+    project. We will be using open-source softwares such as Analysis
+    of Functional Neuro Images (AFNI) and the Linux operating system,
+    this adds to the feasibility of this project.
+
+  \item Furthermore, all the work involved in this project can pretty
+    much be conducted virtually at home, therefore this eliminates the
+    obstacles that may arise due to the on going pandemic.
 
   \item Hence, the feasibility study to conduct this proposed project
     is positive and supportive.
 
 \end{itemize}
 
+\newpage
+
 \section{Methodology}
 
 Based on resting-state functional magnetic resonance imaging data,
 this project will attempt to investigate the functional connectivity
-changes in the hippocampal network of 30 MDD patients and 30
+changes in the hippocampal network of 30 MDD patients and just as many
 well-matched healthy controls.
 
 \subsection{Methods and materials}
@@ -498,50 +929,71 @@ patients with MDD. Our plan is to collect data from (NUMBER) MDD, and
 connectivity of hippocampus regions, and to explore their relationship
 with memory and emotional behaviors.
 
-\subsection{Data Acquisition: Public Data Set}
+\subsection{Data Acquisition}
 
-We will recruit (TOTAL NUMBER) participants, including (NUMBER)
-patients with MDD and (NUMBER) demographically matched healthy control
-(HC) subjects from public dataset which will be matched according to
-age and sex.  Importantly, we plan to choose (number) righthanded
-patients from each group with MDD and HC. Here, we engaged MDD
-patients with BDI (Beck depression Inventory) index more than 30.
+For the data acquisition part, the \textit{SRPBS Multiorder MRI
+Dataset} was used. The public dataset that we will be using contains
+the 3T MRI images data from 1410 participates collected at 11 sites.
+
+Statistical analysis methods such as the T-test and the P-test will be
+applied on this big data to narrow it down to just 30 participants
+including (NUMBER) patients with MDD and (NUMBER) demographically
+matched healthy controls (HC) based on age and sex.
+
+Importantly, we plan to choose (number) right handed patients from
+each group with MDD and HC. Here, we engaged MDD patients with BDI
+(Beck depression Inventory) index more than 30.
 
 Since we will be acquiring the data from large scale public dataset,
 diagnosed by neurologist, this assures our research to be tilted more
-to accuracy and efficiency.  All the participants, extracted from the
+to accuracy and efficiency. All the participants, extracted from the
 public data set, have underwent a standardized clinical evaluation
 protocol, which included a general and neurological examination, which
 will make our research more feasible.
 
+\subsection{Image Pre-processing}
+
+Before statistical analysis, it is necessary to convert the raw fMRI
+data to a form that is understandable by the software and also to
+improve the signal quality of the data obtained from the MRI scanner,
+which includes artifact detection, baseline correction, realignment,
+movement correction, co-registration, normalization, and smoothing.
+
+The fMRI data will be preprocessed using AFNI. AFNI is an open source
+software created an maintained by Robert W. Cox at NIH.
+
+Pre-processing involves spatial or temporal filtering of the fMRI data
+and improving the image resolution. Seed based resting-state
+functional connectivity (rsFC) analysis of hippocampal network will be
+performed such that for each seed region, rsFC will be calculated as
+the correlation between its \textit{mean time} course and the time
+course of every voxel in the brain. Then we will submit the rsFC
+results for each seed region to a 2 x 3 (hemisphere x group)
+mixed-design analysis of variance with age and head motion included as
+covariates. The final rsFC results, between the MDD patients and HC
+will be compared using statistical approach.
+
+% The goal of preprocessing is to eliminate different kinds of artifacts
+% such as motion correction.
+
 \subsection{Functional connectivity analysis}
 
-Resting functional magnetic resonance imaging data will be collected
-and processed with standard procedures. We tend to perform Seed- based
-rsFC analyses.
+Once the rs-fMR images from the public data set has been
+pre-processed, Seed- based rsFC analyses will be performed by
+implementing statistical methods.
 
-Specifically, We plan to assess functional connectivity between
+Specifically, we plan to assess functional connectivity between
 various regions of hippocampal area using fMRI. To assess functional
 connectivity in the brain region, Resting-state analyses, that is,
 time-series correlations in BOLD fMRI data acquired in a task-free
 state will be used.
 
-\subsection{Pre-processing}
-
-Functional fMRI data will be preprocessed using the AFNI software.
-Seed based resting-state functional connectivity(rsFC) analysis of
-hippocampal network will be performed. rsFC for each seed region will
-be calculated as the correlation between its mean time course and the
-time course of every voxel in the brain. Then we will submit the rsFC
-results for each seed region to a 2 × 3 (hemisphere × group)
-mixed-design analysis of variance with age and head motion included as
-covariates. And rsFC results between MDD patients and healthy
-participants will be compared.
-
-\subsection{Statistical Analysis}
-
-T test and chi test will be performed to evaluate group differences in
-demographics.
+A statistical approach to image analysis makes it possible to
+discover, \underline{spatial and temporal} patterns that correspond to
+performance of specific tasks and specific diagnoses. Such statistical
+methods have only been begun to be applied to clinical disorders but
+show promise for increasing the ``specificity'' of brain imaging
+markers for mental illness.
 
 \newpage
 
@@ -556,6 +1008,13 @@ whether the future diagnostic models built on the functional
 connectivity values can improve treatment prediction and clinical
 outcome depend on its accuracy performance.
 
+While clearly not sufficient to provide a detailed understanding of
+the complex and changing functional connectivity of the brain which
+can make actual diagnosis of MDD, this project will lay the
+foundations for further research and development.
+
 \section{Bibliography \& References}
+
+\section*{Abbreviations}
 
 \end{document}
