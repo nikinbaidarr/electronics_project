@@ -5,7 +5,7 @@
 footskip=0.5in]{geometry}
 
 \usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -19,6 +19,10 @@ footskip=0.5in]{geometry}
 \usepackage[hidelinks,linktoc=all]{hyperref}
 \usepackage{xcolor}
 \usepackage{float}
+\usepackage[backend=biber]{biblatex}
+\usepackage{acronym}
+
+\addbibresource{references.bib}
 
 %% Configs:
 
@@ -28,6 +32,7 @@ footskip=0.5in]{geometry}
 \graphicspath{{.img/}}
 
 \newcommand{\HRule}{\rule{\linewidth}{0.1mm}}
+
 
 \begin{document}
 
@@ -74,46 +79,74 @@ footskip=0.5in]{geometry}
   \textbf{\large Abstract}
 \end{center}
 
-  The absence of biological markers makes it exceptionally difficult
-  for neurologists to diagnose a person with a mental disorder.
-  Currently, diagnosis of mental disorders is based on behavioral
-  observations and patient-reported symptoms and the Diagnostic and
-  Statistical Manual of Mental Disorders (DSM) classification.
+The absence of biological markers makes it exceptionally difficult for
+neurologists to diagnose a person with a mental disorder. Currently,
+diagnosis of mental disorders is based on behavioral observations and
+patient-reported symptoms and the Diagnostic and Statistical Manual of
+Mental Disorders (DSM) classification. Although there have been
+thousands of studies revolving around the implementation of various
+imaging modalities for deciphering the etiology and the physical cause
+of several mental disorders, the findings from these studies do not
+appear amongst the diagnostic criteria. Meaning that the findings from
+these studies are not used for diagnosis purposes. A critical barrier
+to the clinical translation of many findings is the reverse inference
+fallacy as neurological disorders are multifaceted and are influenced
+by more than one factor and neuroimaging results can be heavily
+influenced by external factors such as patient movement and
+instrumental artifacts. However, neuroimaging for diagnosis of mental
+disorders seems promising in the future and as a matter of fact, a
+bold (choose correct word here) minority have already started to
+implement neuroimaging techniques such as fMRI, SPECT, PET for the
+diagnosis of psychiatric disorders. Nevertheless, there is no solid
+molecular or imaging basis that is widely accepted for the assessment
+of mental disorders. Here in the proposed research we plan to evaluate
+functional network connectivity of the hippocampus in patients with
+Major Depressive Disorder based on their MR images and investigate the
+changes in the brain network compared to that of healthy controls
+matched according to age and gender.
 
-  Although there have been thousands of studies revolving around
-  implementation of various imaging modalities for deciphering the
-  etiology and the physical cause of several mental disorders, the
-  findings from these studies do not appear amongst the diagnostic
-  criteria. Meaning that the findings from these studies are not used
-  for diagnosis purposes. A critical barrier to the clinical
-  translation of many findings is the reverse inference fallacy.
+\newpage
 
-  Reverse inference is a kind of reasoning that is applied to infer
-  the involvement of a specific cognitive process from observed brain
-  activation during a task.  It attempts to uncover specific cognitive
-  processes or behaviours that may be associated with specific
-  structural or functional brain alterations. However, reasoning
-  backwards from brain activity is problematic because neurological
-  disorders are multifaceted and are influenced by several factors
-  such as concurrent diseases, disease history and artifacts.
+% abstract
+\begin{center}
+  \textbf{\large Abbreviations}
+\end{center}
 
-  For this reason alone, neuroimaging is not ``widely accepted'' in
-  the process of psychiatric diagnosis.  Despite, the reverse
-  inference fallacy, neuroimaging for diagnosis of mental disorders
-  seems promising in the future and as a matter of fact, a bold
-  (choose correct word here) minority have already started to
-  implement neuroimaging techniques such as fMRI, SPECT, PET for the
-  diagnosis psychiatric disorders. Nevertheless, there are no solid
-  molecular or imaging basis that are widely accepted for the
-  assessment of mental disorders.
-
-  Here in the proposed research we will be \textit{assessing} MR
-  images of 35 subjects who, are suffering or have suffered, from one
-  major depressive disorder and \textit{making an attempt} at arriving
-  to a comprehensive conclusion about how the ``limbic brain network''
-  of patients suffering from Major Depressive Disorder compare to that
-  of healthy individuals who share similar socio-demographic
-  parameters as the subjects.
+\begin{acronym}
+    \acro{ACC}{Anterior Cingulate Cortex}
+    \acro{AFNI}{Analysis of Functional Neuroimages}
+    \acro{ASN}{Anterior Salience network}
+    \acro{BDI}{Beck Depression Inventory}
+    \acro{BOLD}{Blood Oxygen Level Dependent}
+    \acro{CA}{Cornu Ammonis}
+    \acro{DG}{Dentate Gyrus}
+    \acro{DMN}{Default Mode Network}
+    \acro{DSM}{Diagnostic and Statistical Manual of Mental Disorders}
+    \acro{ECN}{Executive Control Network}
+    \acro{EEG}{Electroencephalography}
+    \acro{fMRI}{Functional Magnetic Resonance Imaging}
+    \acro{HC}{Healthy Controls}
+    \acro{HPA}{Hypothalamic Pituitary Adrenal}
+    \acro{ICA}{Independent Components Analysis}
+    \acro{ICD}{International Classification for Diseases}
+    \acro{MDD}{Major Depressive Disorder}
+    \acro{MFC}{Medial Frontal Cortex}
+    \acro{MFG}{Middle Frontal Gyrus}
+    \acro{MR}{Magnetic Resonance}
+    \acro{OFC}{Orbitofrontal Cortex}
+    \acro{PET}{Positron Emission Tomography}
+    \acro{PMC}{Premotor Cortex}
+    \acro{rFPDD}{Recurrent Familial Pure Depressive Disorder}
+    \acro{ROI}{Region of Interest}
+    \acro{rs}{Resting State}
+    \acro{rsFC}{Resting-state Functional Connectivity}
+    \acro{SCA}{Seed-based Correlation Analysis}
+    \acro{SPECT}{Single-Photon Emission Computed Tomography}
+    \acro{sMRI}{Structural Magnetic Resonance Imaging}
+    \acro{SNRI}{Serotonin and Norepinephrine Reuptake Inhibitors}
+    \acro{SSRIs}{Selective Serotonin Reuptake Inhibitors}
+    \acro{vPFC}{Ventrolateral Prefrontal Cortex}
+\end{acronym}
 
 \newpage
 
@@ -133,47 +166,42 @@ footskip=0.5in]{geometry}
 \subsection{Major Depressive Disorder}
 
 Major Depressive Disorder, generally abbreviated as MDD, is one of the
-most common and a serious mental disorder. MDD is also referred to as
-clinical depression, or just depression as well.
-
-MDD can be characterized by an array of distinct symptoms; persistent
-felling of sadness, feelings of low self-worth and guilt, and an
-overall reduced ability to take pleasure from activities that
-previously were enjoyable are a few symptoms prevalent in MDD.
-Although, the exact symptoms of depression may vary from person to
-person, depending on their upbringing and various socio-demographic
-variables such as age, sex, religious affiliations, employment, income
-etc; for an individual to be classified as ``suffering from MDD'',
-five out of ten symptoms, one from a set of two and % at least four
-additional symptoms from another set of 5, must have to % have been
-present as a bare minimum during span of 2 weeks.  % insert % WHO
-reference here
-
+most common and serious mental disorders. MDD is also referred to as
+clinical depression, or just depression as well. MDD can be
+characterized by an array of distinct symptoms; persistent feeling of
+sadness, feelings of low self-worth and guilt, and overall reduced
+ability to take pleasure from activities that previously were
+enjoyable are a few symptoms prevalent in MDD. Although, the exact
+symptoms of depression may vary from person to person, depending on
+their upbringing and various socio-demographic variables such as age,
+sex, religious affiliations, employment, income, etc for an individual
+to be classified as “suffering from MDD”, five out of ten symptoms,
+one from a set of two and additional symptoms from another set of
+five, must be present during a span of two weeks \cite{whodepression}.
 In addition to the symptoms that may be prevalent in a person
 suffering from depression, there can be morphological differences in
 several brain regions, including the frontal and temporal lobes. On
-top of that, individuals suffering from  also have abnormal functional
-connectivity. % which we will be exploring in this project.
-
-According to the World Health Organization, more than 264 million
-people of all ages suffer from depression worldwide. Fortunately,
-there are effective psychological and pharmacological treatments for
-moderate to severe depression. The pharmacological treatment includes
-medications, SSRIs and SNRI are two antidepressants that are most
-commonly prescribed. The psychological treatments include
+top of that, individuals suffering from MDD also have abnormal
+functional connectivity. According to the World Health Organization,
+more than 264 million people of all ages suffer from depression
+worldwide \cite{whodepression}. Fortunately, there are effective
+psychological and pharmacological treatments for moderate to severe
+depression. The pharmacological treatment includes medications such
+as, SSRIs and SNRI which are the two most commonly prescribed
+antidepressants \cite{resting}. The psychological treatments include
 psychotherapy and electroconvulsive therapy depending on the severity
-of the depression, treatment can take a few weeks or much longer.
+of the depression. These treatments can take a few weeks or much
+longer.
 
 \subsection{Brain Networks}
 
 A brain network, on a large scale, can be defined as a collection of
-brain regions working together to produce a specific function.
-
-Brain networks can be identified at various different resolutions,
-therefore there is no universal atlas of brain networks that fits all
-circumstances. However, on the basis of converging evidences from
-related studies, there are six large-scale, core brain networks that
-are most widely accepted due to their stability:
+brain regions working together to produce a specific function. Brain
+networks can be identified at different resolutions, therefore there
+is no universal atlas of brain networks that fits all circumstances.
+However, based on converging evidence from related studies, six
+large-scale, core brain networks that are most widely accepted due to
+their stability:
 
 \begin{enumerate}[nosep]
   \item Default Mode Network
@@ -181,40 +209,49 @@ are most widely accepted due to their stability:
   \item Dorsal Attention Network
   \item Frontoparietal Network
   \item Sensorimotor Network
-  \item Visual Cortex
+  \item Visual Network
 \end{enumerate}
 
 There are more subsets of these six networks such as the limbic,
 auditory, right/left executive, cerebellar, spatial attention,
-language, lateral visual, temporal and visual perception/imagery.
-
-An emerging paradigm in neuroscience is that cognitive tasks are
+language, lateral visual, temporal and visual perception/imagery. An
+emerging paradigm in neuroscience is that cognitive tasks are
 performed not by individual brain regions working in isolation but
 rather by brain networks consisting of several discrete brain regions
 that are said to be ``functionally connected''. The functional
 connectivity of brain networks can be acknowledged through
 (statistical) analysis of images acquired through a variety of
-techniques such as the fMRI, EEG, PET or SPECT.
-
-% Statistical analysis makes it possible to discover, spatial and
-% temporal patterns that correspond to performance of specific tasks and
-% specific diagnoses. Statistical methods have only been begun to be
-% applied to clinical disorders but show promise for increasing the
-% ``specificity'' of brain imaging markers for mental illness such as
-% the MDD.
+techniques such as the fMRI, EEG, PET or SPECT
+\cite{wikibrainnetworks}.
+\newpage
 
 \subsection{Resting State Functional Connectivity}
 
-Resting-state functional connectivity can be defined as a %
-significant correlated signal between functionally connected brain
-regions in the absence of any stimulus or task. Resting-state
-functional connectivity measures \textbf{temporal correlation} of
-spontaneous Blood Oxygen Level Dependent (BOLD) signal among spatially
-distributed brain regions, with the assumption that regions with
-correlated activity form functional networks.
+Functional connectivity can be defined as the temporal correlation
+between spatially remote neurophysiological events, expressed as
+deviation from statistical independence across these events in
+distributed neuronal groups and areas. The results of the study
+connected by Bharat B. Biswal et. al. suggests that while variations
+in blood flow might contribute to functional connectivity maps, BOLD
+signals play a dominant role in the mechanism that gives rise to
+functional connectivity in the human brain \cite{biswalsimultaneous}.
+During resting conditions, our brain remains functionally and
+metabolically active. The fact that brain remains ``metabolically
+active" means there will be consumption of oxygen which results in
+fluctuations in the BOLD signal. Resting state functional connectivity
+can be defined as the correlation patterns in the spontaneous
+fluctuations of BOLD signal in the absence of any stimulus or task.
+\cite{frontiers:rsfc}.
+
+Resting-state functional connectivity measures
+the temporal correlation of spontaneous Blood Oxygen Level Dependent
+(BOLD) signals among spatially distributed brain regions, with the
+assumption that regions with correlated activity form functional
+networks.
 
 There are two methods that are most commonly used to examine
 functional connectivity:
+
 \begin{itemize}[nosep]
   \item Seed-based Correlation Analysis (SCA) and
   \item Independent Components Analysis (ICA)
@@ -223,35 +260,33 @@ functional connectivity:
 In seed-based approaches, activity is extracted from a specific region
 of interest and correlated with the rest of the brain. In contrast,
 ICA does not begin with pre-defined brain regions. It is a
-multivariate, data-driven approach that deconstructs fMRI time-series
+multivariate, data- driven approach that deconstructs fMRI time-series
 data throughout the brain into separate spatially independent
-components.
-
-The resting state fMRI produces reliable and reproducible results, and
-in addition to that, there are several features of resting-state fMRI
-that it makes it favorable for investigating the correlation of
-psychiatric and neurological disorders.  First, compared to the
-modular representations of traditional fMRI, functional connectivity
-provides a broader network representation of the functional
-architecture of the brain. Second, the absence of an explicit task
-eases the \textit{cognitive demand of the fMRI environment}, thereby
-eliminating the problem of whether or not to match groups on task
-performance and allowing researchers to investigate under-studied
+components. The resting-state fMRI study produces reliable and
+reproducible results, and several features of resting-state fMRI makes
+it favorable for investigating the functional correlation of various
+brain regions in psychiatric and neurological disorders. First,
+compared to the modular representations of traditional fMRI,
+functional connectivity provides a broader network representation of
+the functional architecture of the brain. Second, the absence of an
+explicit task eases the cognitive demand of the fMRI environment,
+thereby eliminating the problem of whether or not to match groups on
+task performance and allowing researchers to investigate under-studied
 populations, including infants and cognitively impaired individuals.
 Finally, the relatively standard manner in which resting-state fMRI
 data are acquired makes it ideal for multi-site investigations and
-data sharing.
+data sharing.\cite{resting}
 
 \subsection{Neuroimaging}
 
 Neuroimaging or brain imaging is the use of various imaging modalities
-to either directly or indirectly image the structure, the function, or
-the pharmacology of the nervous system. Current neuroimaging
-techniques reveal both form and function. They reveal the brain's
-anatomy, including the integrity of brain structures and their
+to either directly or indirectly image the structure, function, or
+pharmacology of the nervous system. Current neuroimaging techniques
+reveal both form and function. They reveal the brain's anatomy,
+including the integrity of brain structures and their
 interconnections. Neuroimaging can be divided into two broad
 categories:
-
+\vspace{-10pt}
 \begin{enumerate}
 
   \item \textbf{Structural Imaging}, which deals with the structure of
@@ -259,28 +294,25 @@ categories:
     intracranial disease (such as a tumor) and head injury.
 
   \item \textbf{Functional imaging}, which is used to diagnose
-    metabolic diseases and lesions on a finer scale (such as
-    Alzheimer's disease) and also for neurological and cognitive
-    psychology research and building brain-computer interfaces.
+        metabolic diseases and lesions on a finer scale (such as
+        Alzheimer's disease) and also for neurological and cognitive
+        psychology research and building brain-computer interfaces
+        \cite{neuroimaging}.
 
 \end{enumerate}
 
+\vspace{-10pt}
 \enlargethispage{\baselineskip}
-
 Functional Magnetic resonance imaging (fMRI) is a modern technique of
-imaging, which is a powerful non-invasive and safe tool which is used
-for the study of the function of the brain based on the measure of the
-brain neural activation. The fMRI can localize the location of
-activity in the  brain  which  is  caused  due  to sensory stimulation
-or  cognitive  function. In clinical field, fMRI allows the
-researchers to study how does a healthy brain function, how different
-diseases affect the brain functions, how healthy brain function is
-recovered after damage and how drugs can control the diseases effect
-on the brain activity.
-
-% near-term and long-term prospects of neuroimaging? and what obstacles
-% block the use of such methods? Answer to the 2nd: The nature of
-% imaging studies and of psychiatric diagnosis.
+imaging, which is a powerful non-invasive and safe tool used for the
+study of the function of the brain based on the measure of the brain
+neural activation. The fMRI can localize the location of activity in
+the  brain  which  is  caused  due  to sensory stimulation or
+cognitive  function. In the clinical setting, fMRI allows the
+researchers to study how healthy brain functions, how different
+diseases affect the brain functions, how brain functions altered due
+to disease or injury can be restored, and how how drugs can control
+the disease's effect on brain activity \cite{fMRI}.
 
 \newpage
 
@@ -288,51 +320,33 @@ on the brain activity.
 
 The objectives of the proposed project are as follows:
 
-\subsection{General Objectives}
-
-\begin{itemize}
-
-  \item Deploy computational tools , and develop image processing
-    strategies for the exploration of MR image datasets of brain using
-    AFNI.
-
-  \item Explore data visualization tools, with emphasis on displaying
-    functional brain networks.
-
-  \item To perform Seed-based Analysis (SCA) to explore functional
-    connectivity within the brain based on the time series of a seed
-    voxel or Region of Interest (ROI).
-
-\end{itemize}
-
 \subsection{Specific Objectives}
 
 \begin{itemize}
 
-  \item Perform analysis of the functional and structural connectivity
-    of the hippocampal network of patients suffering from Major
-    Depressive Disorder and acquire a comprehensive idea about how it
-    compares to that of normal individuals from the same
-    socio-demographic background.
+  \item Deploy computational tools, and implement image processing
+        strategies for the exploration of MR image datasets of the
+        human brain using AFNI.
 
-% to derive conclusions for the sake of validating the statement
-% "psychological symptoms and behavioral defects in patients suffering
-% from mental health issues are closely related to structural and
-% functional changes in specific regions of the brain".
+  \item Explore data visualization tools, with emphasis on displaying
+        functional brain networks.
 
+  \item To perform Seed-based Analysis (SCA) to explore functional
+        connectivity within the brain based on the time series of a seed
+        voxel or Region of Interest (ROI).
 
 \end{itemize}
 
-% public datasets including those involving
-% patient outcomes, relating pathology to cellular expression (RNA seq)
-% and genetic phenotypes, among others.
+\subsection{General Objectives}
 
-% \begin{itemize}
-  % \item The functional and structural connectivity of Hippocampal
-    % network in MDD : To study of how structure and function of brain
-    % with MDD is different than that of normal. : Study the effect of
-    % MDD in hippocampus of patients suffering from MDD
-% \end{itemize}
+\begin{itemize}
+
+  \item Perform analysis of the functional connectivity of the
+      hippocampus in patients suffering from Major Depressive Disorder
+      and acquire a comprehensive idea about how it compares to that
+      of normal individuals of the same age group.
+
+\end{itemize}
 
 \newpage
 
@@ -340,65 +354,52 @@ The objectives of the proposed project are as follows:
 
 \subsection{Need For An Imaging Basis}
 
-The diagnosis procedures that are the gold standard for diagnosis of
-psychiatric disorders are wholly based on behavioral observations and
-patient reported symptoms. There are two most widely established
-symptoms that are used to classify these manifestations, one is the
-Diagnostic and Statistical Manual of Mental Disorders (DSM) and the
-other is International Classification for Diseases (ICD).
-
-Despite each being as widely used as the other, both of these
-diagnosis manuals are more like frameworks provide a way of
-classifying a psychiatric disorder depending on patterns of behaviour
-rather than interpreting the etiology and the physical cause of those
-disorders.
-
-This statement alone raises an argument that ``although reliable,
-current diagnostic procedures in psychiatry are not entirely valid''.
-
-\iffalse
-Reliable in the sense that any trained professional will arrive at
-the same diagnosis for each patient.
-
-Valid in the sense that it reflects the underlying psychological
-and biological commonalities and differences among different
-disorders to a certain extent. Validity continues to be more
-difficult to achieve.
-\fi
+The diagnosis procedures that are the gold standard for the diagnosis
+of psychiatric disorders are wholly based on behavioral observations
+and patient reported symptoms. Current diagnostic procedures involved
+do not have an imaging or a biochemical basis \cite{noimagingbasis}
+\cite{nobiochemicalbasis}. Two most widely established symptoms are
+used to classify these manifestations, one is the Diagnostic and
+Statistical Manual of Mental Disorders (DSM) and the other is
+International Classification for Diseases (ICD). Despite each being,
+widely used as the other, both of these diagnosis manuals are more
+like frameworks that provide a way of classifying a psychiatric
+disorder depending on patterns of behaviour rather than interpreting
+the etiology and the physical cause of those disorders. This statement
+alone raises an argument that “although reliable, current diagnostic
+procedures in psychiatry are not entirely valid”.
 
 Let us take an example of the diagnostic procedure involved in the
 diagnosis of Major Depressive Disorder. The DSM-V, published in 2013,
 is the most up-to-date manual and is based upon the work of expert
 study groups and makes use of large sets of data. According to the
-DSM-V, for a person to be classified as "suffering from Major
-Depressive Disorder", \textit{he/she must report with either depressed
-mood or anhedonia (inability to feel pleasure in normally pleasurable
-activities) along with four out of eight additional symptoms}.
-
-This makes it totally possible for 2 distinct individuals who do not
-share a single symptom in common and yet receive treatment (or
-medication) for MDD.
+DSM-V, for a person to be classified as ”suffering from Major
+Depressive Disorder”, he/she must report with either depressed mood or
+anhedonia (inability to feel pleasure in normally pleasurable
+activities) along with four out of eight additional symptoms
+\cite{diagnosticbrainimaging}. This makes it possible for two distinct
+individuals who do not share a single symptom in common and to receive
+similar treatment (or medication) for MDD.
 
 Furthermore, the current diagnostic procedures such as the DSM-V are
 not perfect. For example, impulsivity, emotional lability (the
 property of changing rapidly), and difficulty with concentration each
-occurs in more than one disorder.
-
-Now, the fact that, different exemplars of the same category can share
-no symptoms and that the exemplars of two different categories may
-share common symptoms, raises questions about the validity of the
-current diagnostic procedures in psychiatry.
+occur in more than one disorder. Now, the fact that different
+exemplars of the same category can share no symptoms and that the
+exemplars of two different categories may share common symptoms,
+raises questions about the validity of the current diagnostic
+procedures in psychiatry.
 
 In addition to that, some other medical conditions such as thyroid
-disease, brain tumors, vitamin deficiency can mimic depression like
-symptoms. Therefore, a may also have to be conducted in order to rule
-out some other medical condition that may be causing depressive
-symptoms. For instance, a blood test might be done to ensure the
-symptoms are not due to thyroid related issues.
+disease, brain tumors, and vitamin deficiency can mimic
+depression-like symptoms\cite{externalfactorsinMDD}. Therefore, a
+diagnosis may also have to be conducted in order to rule out some
+other medical condition that might be causing depressive symptoms. For
+instance, a blood test can be done to ensure the symptoms are not due
+to thyroid related issues.
 
-Taking the above mentioned arguments into consideration it is crystal
-clear that there is a need for an imaging basis for the diagnosis of
-mental disorders.
+Considering the above mentioned arguments, an imaging basis for the
+diagnosis of mental disorders seems like the need of the hour.
 
 \newpage
 \subsection{Reverse Inference Fallacy}
@@ -1013,8 +1014,7 @@ the complex and changing functional connectivity of the brain which
 can make actual diagnosis of MDD, this project will lay the
 foundations for further research and development.
 
-\section{Bibliography \& References}
+\newpage
 
-\section*{Abbreviations}
-
+\printbibliography
 \end{document}
